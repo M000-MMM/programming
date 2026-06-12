@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Relax Smart Motel</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body dir="rtl">
+  <!-- NAV -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="assets/logo.png" alt="Relax Smart Motel logo" class="logo" />
+        <span class="brand-name">ريلاكس موتيل</span>
+      </div>
+      <nav class="main-nav">
+        <a href="#home">الرئيسية</a>
+        <a href="#rooms">الغرف</a>
+        <a href="#about">عنّا</a>
+        <a href="#contact">تواصل</a>
+        <button id="bookBtn" class="btn primary">احجز الآن</button>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="قائمة">☰</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>مرحباً بك في ريلاكس موتيل</h1>
+        <p>إقامة ذاتية الخدمة للمسافرين — حجز سريع، دخول بدون تلامس، غرف نظيفة ومريحة 24/7.</p>
+        <div class="hero-actions">
+          <button class="btn primary" id="heroBook">احجز غرفة</button>
+          <a href="#rooms" class="btn">عرض الغرف</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="assets/hero.jpg" alt="صورة الغرفة" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ROOMS -->
+  <section id="rooms" class="rooms container">
+    <h2>الغرف المتاحة</h2>
+    <div class="room-list">
+      <!-- repeat room card -->
+      <article class="room-card">
+        <img src="assets/room1.jpg" alt="غرفة قياسية" />
+        <div class="room-info">
+          <h3>الغرفة القياسية</h3>
+          <p>سرير مزدوج — واي فاي — تكييف — دخول تلقائي</p>
+          <div class="room-meta">
+            <span class="price">ريال 90 / الليلة</span>
+            <button class="btn outline book-now">احجز</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="room-card">
+        <img src="assets/room2.jpg" alt="غرفة عائلية" />
+        <div class="room-info">
+          <h3>الغرفة العائلية</h3>
+          <p>سريران — حمام خاص — تلفاز — مناسبة للعائلات</p>
+          <div class="room-meta">
+            <span class="price">ريال 140 / الليلة</span>
+            <button class="btn outline book-now">احجز</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- أضف المزيد حسب الحاجة -->
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about container">
+    <h2>عن ريلاكس موتيل</h2>
+    <p>نظام إقامة ذاتي الخدمة مُصمم للمسافر السريع: حجز عبر الويب، فتح الغرفة برمز، والاستفادة من خدمات رقمية موثوقة.</p>
+  </section>
+
+  <!-- BOOKING MODAL -->
+  <div id="bookingModal" class="modal hidden" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+      <button class="close-modal" id="closeModal">×</button>
+      <h3>نموذج الحجز</h3>
+      <form id="bookingForm">
+        <label>الاسم
+          <input type="text" name="name" required />
+        </label>
+        <label>رقم الجوال
+          <input type="tel" name="phone" required />
+        </label>
+        <label>تاريخ الوصول
+          <input type="date" name="checkin" required />
+        </label>
+        <label>ليالي الإقامة
+          <input type="number" name="nights" min="1" value="1" required />
+        </label>
+        <label>نوع الغرفة
+          <select name="roomType">
+            <option>الغرفة القياسية</option>
+            <option>الغرفة العائلية</option>
+          </select>
+        </label>
+        <button type="submit" class="btn primary">تأكيد الحجز</button>
+      </form>
+      <div id="bookingMsg" class="booking-msg"></div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <footer id="contact" class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h4>تواصل معنا</h4>
+        <p>هاتف: 05X-XXXXXXX</p>
+        <p>العنوان: طريق السريع، محطة الراحة</p>
+      </div>
+      <div>
+        <h4>روابط</h4>
+        <a href="#home">الرئيسية</a><br/>
+        <a href="#rooms">الغرف</a>
+      </div>
+    </div>
+    <div class="copyright">© 2026 ريلاكس موتيل</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
